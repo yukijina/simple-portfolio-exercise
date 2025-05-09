@@ -9,15 +9,18 @@
   --secondary-color: #fefeff;
   --primary-color-dark: #433ae2;
   --secondary-color-dark: #f3f1fb;
+  --grey-color: #636669;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 body {
   background-color: var(--secondary-color);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  margin: 5rem auto;
+  margin: 12rem auto 5rem auto;
   text-align: center;
 }
 
@@ -26,17 +29,24 @@ header p {
   font-weight: 600;
 }
 
-header h1 {
-  font-size: 6rem;
+h1,
+h2,
+h3 {
   font-family: 'Noto Serif', serif;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
+  font-size: 5rem;
 }
 
 h3 {
-  font-family: 'Noto Serif', serif;
   font-weight: 600;
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -50,11 +60,10 @@ footer p {
   text-align: center;
 }
 
-.navbar-expand-lg {
-  margin-right: 2rem;
-  margin-left: 2rem;
+/* Nav Bar */
+.bg-body-purple {
+  background: #f5f2fe;
 }
-
 .navbar-collapse {
   justify-content: end;
 }
@@ -64,9 +73,15 @@ footer p {
   height: 40px;
 }
 
+/* Header */
 .header-btn-container {
   margin-top: 5rem;
   margin-bottom: 10rem;
+}
+
+.sub-title {
+  font-weight: 600;
+  color: var(--grey-color);
 }
 
 .cs-link-dark,
@@ -102,7 +117,6 @@ footer p {
 .cs-row {
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
   justify-content: center;
 }
 
@@ -132,4 +146,61 @@ footer p {
 
 .cs-btn:hover {
   background: var(--primary-color-dark);
+}
+
+/* About me */
+.about-text-container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/* Contact me */
+.contact-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.contact-section p {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  main {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .cs-row {
+    flex-direction: column;
+  }
+
+  .cs-col-text {
+    order: 1;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+  }
+
+  .cs-link-dark,
+  .cs-link-light {
+    padding: 1rem 1.5rem;
+  }
+  .cs-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
 }
